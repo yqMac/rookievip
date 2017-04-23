@@ -1,0 +1,27 @@
+﻿{
+   // "background": {
+   //    "scripts": [ "rookie.js" ]
+   // },
+   "description": "vip视频",
+   "icons": {
+      "128": "VIPship.png",
+      "16": "VIPship.png",
+      "48": "VIPship.png"
+   },
+   "browser_action": {
+        "default_icon": "VIPship.png",
+        "default_title": "vip视频"
+    },
+   "manifest_version": 2,
+   "name": "vip视频",
+   "description": "全网VIP视频试看，插件仅供娱乐，不保证完全可使用，请低调使用~~",
+   "permissions": [ "contextMenus" ],
+   "version": "4.3",
+     "content_scripts": [{ 
+         "matches": ["http://*/*","https://*/*"],   
+         "js": ["jquery-3.2.1.min.js", "rookie.js"],   
+         // "run_at": "document_start",  
+         "run_at": "document_end",
+         "all_frames": true   
+    }]
+}
